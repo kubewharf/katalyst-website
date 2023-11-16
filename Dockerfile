@@ -1,4 +1,3 @@
-FROM klakegg/hugo:ext-alpine
+FROM klakegg/hugo:ext-debian
 
-RUN apk add git && \
-  git config --global --add safe.directory /src
+CMD ["serve", "--cleanDestinationDir", "--themesDir", "../..", "--baseURL",  "http://localhost:1313/katalyst-website/", "--buildDrafts", "--buildFuture", "--disableFastRender", "--ignoreCache", "--watch"]

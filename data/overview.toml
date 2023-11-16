@@ -1,12 +1,11 @@
 
 project_short_desc = "项目的简短描述"
 
-project_short_desc_en = "This is a short description content"
+project_short_desc_en = "A QoS-based resource management system for workload colocation on kubernetes"
 
 why_choose_this = "请描述项目的优势和亮点"
 
-why_choose_this_en = "Please write the project highlights and features in here."
-
+why_choose_this_en = "Katalyst defines and implements QoS classes that reflect QoS requirements of various types of workloads including microservice, online inference tasks, offline training jobs, batch jobs and so forth. By assigning proper QoS classes, user can safely colocate online and offline workloads to reclaim unused resource and improve overall resource efficiency."
 # 项目优势和特点（中文）
 [[features]]
 feature = "特征1"
@@ -83,4 +82,4 @@ alt = 'feishu logo'
 [[docs_info]]
 href = "/docs"
 name = "文档名称"
-name_en = "DocsEnglishName"
+name_en = "Katalyst Docs"
