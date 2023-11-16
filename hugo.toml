@@ -153,7 +153,7 @@ prism_syntax_highlighting = false
 #  Set to true to disable breadcrumb navigation.
 breadcrumb_disable = false
 # Set to true to disable the About link in the site footer
-footer_about_disable = false
+footer_about_disable = true
 # Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top navbar
 navbar_logo = "/img/navbar-logo.png"
 # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
@@ -180,6 +180,7 @@ no = 'Sorry to hear that. Please <a href="https://github.com/kubewharf/katalyst-
 enable = false
 
 [params.links]
+
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
 #[[params.links.user]]
 #  name = "User mailing list"
@@ -212,6 +213,14 @@ enable = false
 #  url = "https://example.org/mail"
 #  icon = "fa fa-envelope"
 #  desc = "Discuss development issues around the project"
+
+[params.footerLinks]
+[[params.footerLinks.items]]
+name = "About"
+url = "/about/"
+[[params.footerLinks.items]]
+name = "License"
+url = "https://github.com/kubewharf/katalyst-website/blob/main/LICENSE"
 
 # hugo module configuration
 
