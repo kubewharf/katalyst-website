@@ -5,6 +5,7 @@
   {{ $gh_subdir := ($.Param "github_subdir") }}
   {{ $current_page := (.RelPermalink) }}
   {{ $gh_project_repo := ($.Param "github_project_repo") }}
+  {{ $gh_web_repo := ($.Param "github_web_repo") }}
   {{ $gh_org := (string ($.Param "github_org")) }}
   {{ $gh_branch := (default "master" ($.Param "github_branch")) }}
 
@@ -31,18 +32,18 @@
     {{ else if $gh_subdir }}
       {{ $gh_repo_path = printf "%s/%s/content/%s" $gh_branch $gh_subdir $pathFormatted }}
     {{ end }}
-    {{ $editURL := printf "%s/edit/%s" $gh_repo $gh_repo_path }}
-    {{ $createURL := printf "%s/edit/%s" $gh_repo $gh_repo_path }}
-    {{ $issuesURL := printf "%s/issues/new?labels=bug&template=DOCS_UPDATE.md&title=%s" $gh_repo (safeURL $.Title )}}
+    {{ $editURL := printf "%s/edit/%s" $gh_web_repo $gh_repo_path }}
+    {{ $createURL := printf "%s/edit/%s" $gh_web_repo $gh_repo_path }}
+    {{ $issuesURL := printf "%s/issues/new?labels=bug&template=DOCS_UPDATE.md&title=%s" $gh_web_repo (safeURL $.Title )}}
     {{ $newPageStub := resources.Get "stubs/new-page-template.md" }}
     {{ $newPageQS := querify "value" $newPageStub.Content "filename" "change-me.md" | safeURL }}
-    {{ $newPageURL := printf "%s/new/%s?%s"  $gh_repo $gh_repo_path $newPageQS }}
+    {{ $newPageURL := printf "%s/new/%s?%s"  $gh_web_repo $gh_repo_path $newPageQS }}
 
     <a href="{{ $editURL }}" target="_blank"><i class="fa fa-edit fa-fw"></i> {{ T "post_edit_this" }}</a>
     <a href="{{ $newPageURL }}" target="_blank"><i class="fa fa-edit fa-fw"></i> {{ T "post_create_child_page" }}</a>
     <a href="{{ $issuesURL }}" target="_blank"><i class="fab fa-github fa-fw"></i> {{ T "post_create_issue" }}</a>
     {{ if $gh_project_repo }}
-      {{ $project_issueURL := printf "%s/issues/new/choose" $gh_project_repo }}
+      {{ $project_issueURL := printf "%s/issues/new" $gh_repo }}
       <a href="{{ $project_issueURL }}" target="_blank"><i class="fas fa-tasks fa-fw"></i> {{ T "post_create_project_issue" }}</a>
     {{ end }}
 
