@@ -59,6 +59,13 @@
                             </ul>
                         {{ end }}
                     </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 home-footer-links-item">
+                        <div class="home-footer-links-item-title">{{ i18n "contact_us" }}</div>
+                        <ul>
+                            <li><a href="mailto:cloudnative.infra@bytedance.com">{{ i18n "email" }}: {{ .Site.Params.project_email }}</a></li>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             {{ else }}
 				{{ if eq .Page.File.Ext "md" }}

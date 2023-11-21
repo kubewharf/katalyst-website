@@ -99,6 +99,7 @@ section = ["HTML", "print", "RSS"]
 
 [params]
 project_name = "Katalyst"
+project_email = "cloudnative.infra@bytedance.com"
 time_format_blog = "Monday, January 02, 2006"
 time_format_default = "January 2, 2006"
 copyright = "The Katalyst Authors"
