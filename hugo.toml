@@ -95,7 +95,7 @@ description = "A QoS-based resource management system for workload colocation on
 
 # Comment out if you don't want the "print entire section" link enabled.
 [outputs]
-section = ["HTML", "print", "RSS"]
+section = ["HTML"]
 
 [params]
 project_name = "Katalyst"
