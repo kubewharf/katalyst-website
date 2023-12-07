@@ -6,6 +6,10 @@ project_short_desc_en = "A QoS-based resource management system for workload col
 why_choose_this = "请描述项目的优势和亮点"
 
 why_choose_this_en = "Katalyst defines and implements QoS classes that reflect QoS requirements of various types of workloads including microservice, online inference tasks, offline training jobs, batch jobs and so forth. By assigning proper QoS classes, user can safely colocate online and offline workloads to reclaim unused resource and improve overall resource efficiency."
+
+# 原理图地址
+how_it_works_href = "./img/overview/how-it-works.jpg"
+
 # 项目优势和特点（中文）
 [[features]]
 feature = "特征1"
@@ -22,19 +26,16 @@ feature_desc = "特征3的简要描述内容"
 
 # 项目优势和特点（英文）
 [[features_en]]
-feature = "Project_Feature_One"
-feature_desc = "Project_Feature_One_Desc"
+feature = "Differentiated QoS Classes"
+feature_desc = "Katalyst defines and implements four QoS classes of its own, covering QoS requirements of various workloads including offline training jobs, microservices, online inference tasks and so on."
 
 [[features_en]]
-feature = "Project_Feature_Two"
-feature_desc = "Project_Feature_Two_Desc"
+feature = "Intelligent Resource Reclaim Strategy"
+feature_desc = "Katalyst has built-in PID algorithm that finds the sweet spot between node resource utilization and service stability. It also provides a plugable policy framework with which you can bake your own ML-based prediction algorithms."
 
 [[features_en]]
-feature = "Project_Feature_Three"
-feature_desc = "Project_Feature_Three_Desc"
-
-# 原理图地址
-how_it_work_href = ""
+feature = "Automated Configuration Management"
+feature_desc = "Katalyst provides flexible configuration management capabilities for clusters, workloads and nodes. You can easily make configuration changes to adapt to various colocation scenarios."
 
 # 出品方信息
 [[created_by_info]]
