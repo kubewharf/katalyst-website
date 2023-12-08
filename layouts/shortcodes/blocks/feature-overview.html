@@ -6,7 +6,7 @@
 {{ $info_source := .Get "info" | default "custom" }}
 {{ $icon := .Get "icon" | default "fab" }}
 {{ $lang := .Site.Language.Lang }}
-{{ $how_it_works_href := .Site.Data.overview.how_it_work_href }}
+{{ $how_it_works_href := .Site.Data.overview.how_it_works_href }}
 {{ $feature := (cond (eq $lang "en") .Site.Data.overview.features_en .Site.Data.overview.features)}}
 <a id="td-block-{{ .Ordinal }}" class="td-offset-anchor"></a>
 <section class="row td-box td-box--{{ $col_id }} td-box--gradient td-box--height-{{ $height }} {{ $_class }}">
@@ -28,8 +28,8 @@
 				{{ end }}
 			{{ else if eq $info_source "work"}}
                 <h2 class="home-section-title">{{ i18n "how_work" }}</h2>
-                <div class="row home-used-by-wrapper">
-                    <img class="home-used-by-item" src="{{ $how_it_works_href }}" alt="how it works picture">
+                <div class="row home-used-by-wrapper" style="text-align: center;">
+                    <img class="home-used-by-item" src="{{ $how_it_works_href }}" style="width: 80%;height: auto" alt="how it works picture">
                 </div>
             {{ else if eq $info_source "create_use"}}
                 <h2 class="home-section-title">{{ i18n "created_by" }}</h2>

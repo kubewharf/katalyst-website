@@ -3,7 +3,7 @@ title: "Katalyst: A QoS-based resource management system for workload colocation
 date: 2023-12-06
 weight: 2
 keywords: ["keywords"]
-description: An introduction on Katalyst
+description: An introduction to Katalyst
 ---
 
 The resource usage of web applications tends to fluctuate with changes in the number of visitors, displaying noticeable tidal characteristics. To ensure stability, service providers often allocate resources for their applications according to resource usage during peak periods. These resources can easily be underutilized during off-peak hours.
