@@ -6,6 +6,8 @@ keywords: ["concepts"]
 description: ""
 ---
 
+Colocation is one of the core features of Katalyst. In order to achieve colocation, Katalyst introduces and implements a few core concepts. This document gives a high level explaination on those concepts.
+
 ## QoS
 
 To extend the ability of kubernetes' original QoS class, katalyst defines its own QoS class with CPU as the dominant resource. Other than memory, CPU is considered as a divisible resource and is easier to isolate. And for cloudnative workloads, CPU is usually the dominant resource that causes performance problems. So katalyst uses CPU to name different QoS classes, and other resources are implicitly accompanied by it.

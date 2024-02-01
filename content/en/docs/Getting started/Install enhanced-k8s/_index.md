@@ -1,17 +1,17 @@
 ---
-title: "Install kubewharf enhanced-k8s"
-linkTitle: "Install kubewharf enhanced-k8s"
+title: "Install Kubewharf enhanced-k8s"
+linkTitle: "Install Kubewharf enhanced-k8s"
 weight: 1
 keywords: ["Getting Started", "Installation"]
 ---
-Currently, Katalyst depends on [kubewharf enhanced kubernetes](https://github.com/kubewharf/enhanced-k8s). So before installing Katalyst, you will have to set up a kubewharf enhanced kubernetes cluster.
+Currently, Katalyst depends on [Kubewharf enhanced kubernetes](https://github.com/kubewharf/enhanced-k8s). So before installing Katalyst, you will have to set up a kubewharf enhanced kubernetes cluster.
 
 ## Prerequisite
 The following instructions are tested on veLinux on Volcengine with kubeadm, and should apply to other DEB-based linux systems.
 - The set-up process requires internet access from the hosts. So if you are trying to deploy enhanced kubernetes on Volcengine ECS, you need to use products like NAT.
 - Since we use kubeadm as a deployment tool, do a sanity check on the hosts you are using to deploy kubernetes as described here.
 - To adopt kubewharf to its full extent, we'd recommend Linux kernel 4.19 or higher.
- 
+
 ## Download binaries
 Some components and tools are delivered as binary artifacts. The release versions for these binaries are referenced from kubernetes changelog. Notice that kubelet/kubeadm/kubectl are redistributed by kubewharf.
 
@@ -22,7 +22,7 @@ cd deploy
 wget https://github.com/containerd/containerd/releases/download/v1.4.12/containerd-1.4.12-linux-amd64.tar.gz
 wget https://github.com/opencontainers/runc/releases/download/v1.1.1/runc.amd64
 wget https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.25.0/crictl-v1.25.0-linux-amd64.tar.gz
-wget https://github.com/kubewharf/enhanced-k8s/releases/download/v1.24.6-kubewharf.7/kubernetes-node-linux-amd64.tar.gz
+wget https://github.com/kubewharf/enhanced-k8s/releases/download/v1.24.6-kubewharf.8/kubernetes-node-linux-amd64.tar.gz
 
 cd -
 ```
@@ -259,7 +259,7 @@ etcd:
     dataDir: /var/lib/etcd
 imageRepository: kubewharf
 kind: ClusterConfiguration
-kubernetesVersion: v1.24.6-kubewharf.7
+kubernetesVersion: v1.24.6-kubewharf.8
 networking:
   dnsDomain: cluster.local
   serviceSubnet: 172.23.192.0/18
