@@ -7,7 +7,7 @@ keywords: ["Colocation", "Quick Start"]
 This is a quick start guide to get a taste of what you can achieve with Katalyst colocation capabilities. It is highly suggested that you read through [core concepts](../../overview/core-concepts/) before you begin, so that you won't get confused on some terminologies in this guide.
 
 ## Prerequisites
-As of v0.4.0, Katalyst colocation capability still depends on Kubewharf enhanced kubernetes to work properly. If you don't have a Kubewharf enhanced kubernetes cluster up and running already, please follow [this guide](../install-enhanced-k8s/) to install one.
+As of v0.5.0, Katalyst colocation capability can run both on vanilla kubernetes and Kubewharf enhanced kubernetes. If you choose to run colocation on Kubewharf enhanced kubernetes, please follow [this guide](../install-enhanced-k8s/) to install one first and continue with this guide.
 
 ## Installation
 ### Add helm repo
@@ -22,8 +22,13 @@ helm install malachite -n malachite-system --create-namespace kubewharf/malachit
 ```
 
 ### Install Katalyst colocation
+#### Option 1: Install Katalyst colocation on Kubewharf enhanced kubernetes
 ```bash
 helm install katalyst-colocation -n katalyst-system --create-namespace kubewharf/katalyst-colocation
+```
+#### Option 2: Install Katalyst colocation on vanilla kubernetes
+```bash
+helm install katalyst-colocation -n katalyst-system --create-namespace kubewharf/katalyst-colocation-orm
 ```
 
 ## A colocation example
