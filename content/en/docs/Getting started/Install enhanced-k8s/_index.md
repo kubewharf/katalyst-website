@@ -4,7 +4,7 @@ linkTitle: "Install Kubewharf enhanced-k8s"
 weight: 1
 keywords: ["Getting Started", "Installation"]
 ---
-Currently, Katalyst depends on [Kubewharf enhanced kubernetes](https://github.com/kubewharf/enhanced-k8s). So before installing Katalyst, you will have to set up a kubewharf enhanced kubernetes cluster.
+As of v0.5.0, Katalyst colocation can run on both vanilla kubernetes and on [Kubewharf enhanced kubernetes](https://github.com/kubewharf/enhanced-k8s). If you choose to run Katalyst on Kubewharf enhanced kubernetes, this document guides you through the steps of installing one.
 
 ## Prerequisite
 The following instructions are tested on veLinux on Volcengine with kubeadm, and should apply to other DEB-based linux systems.
