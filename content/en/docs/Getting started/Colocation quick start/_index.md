@@ -166,7 +166,7 @@ exit
 fi
 
 date
-cat /sys/fs/cgroup/cpuset/"$cp"/cpuset.cpus
+cat /sys/fs/cgroup"$cp"/cpuset.cpus
 EOF
 
 chmod 700 /tmp/get_cpuset.sh
